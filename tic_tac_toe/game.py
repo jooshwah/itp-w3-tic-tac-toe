@@ -24,7 +24,6 @@ class Game(object):
         return True
 
     def get_winner(self):
-        # import ipdb; ipdb.set_trace()
         valid_combinations = [
             self.board.get_row(i) for i in range(3)
         ] + [
@@ -94,9 +93,9 @@ class Board(object):
         #     [val or '-' for val in self._board[2]]
         # ))
 
-        flatten_board = [
-            item or '-' for sublist in self._board for item in sublist]
-        return BOARD_TEMPLATE.format(*flatten_board)
+        return BOARD_TEMPLATE.format(*[
+            item or '-' for item in self.flatten()
+        ])
 
     def get_row(self, row_number):
         return self._board[row_number]
