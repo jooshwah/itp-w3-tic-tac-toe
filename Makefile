@@ -9,6 +9,14 @@ test:
 	@echo $(TAG)Running tests$(END)
 	PYTHONPATH=. py.test -s tests
 
+test-game:
+	@echo $(TAG)Running tests$(END)
+	PYTHONPATH=. py.test -s tests/test_game.py
+
+test-board:
+	@echo $(TAG)Running tests$(END)
+	PYTHONPATH=. py.test -s tests/test_board.py
+
 test-cov:
 	@echo $(TAG)Running tests with coverage$(END)
 	PYTHONPATH=. py.test --cov=$(PROJECT_PACKAGE) tests
