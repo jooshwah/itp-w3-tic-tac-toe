@@ -1,0 +1,6 @@
+============================= test session starts ==============================
+platform linux2 -- Python 2.7.6, pytest-3.0.3, py-1.4.31, pluggy-0.4.0
+rootdir: /home/ubuntu/workspace, inifile: 
+plugins: cov-2.4.0
+
+========================= no tests ran in 0.00 seconds =========================
