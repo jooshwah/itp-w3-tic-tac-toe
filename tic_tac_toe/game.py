@@ -51,7 +51,13 @@ class Game(object):
         return self.next_player
 
     def move(self, player, row, col):
-        if row not in range(3) or col not in range(3) or player != self.next_player or self.is_finished() == True:
+        movement_is_invalid = (
+            row not in range(3) or 
+            col not in range(3) or 
+            player != self.next_player or 
+            self.is_finished()is True
+        )
+        if movement_is_invalid:
             raise InvalidMovementException()
         else:
             for i in range(3):
